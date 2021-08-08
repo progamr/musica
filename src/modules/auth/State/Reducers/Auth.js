@@ -15,7 +15,7 @@ export const AuthReducer = (state = initialState, action) => {
             };
         case LOGIN.SUCCESS:
             return {
-                access_token: action.payload.access_token,
+                access_token: action.payload,
                 loading: false,
                 error: null,
             };
