@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArtistDetails = () => {
+export const ArtistDetails = () => {
     return (
         <div>ArtistDetails Page</div>
     );

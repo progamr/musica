@@ -11,7 +11,7 @@ import store from './store';
 
 function App() {
 
-    const authToken = null;
+    const authToken = 'null';
 
   return (
       <Provider store={store}>

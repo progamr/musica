@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ArtistsList = () => {
+export const ArtistsList = () => {
     return (
         <div>ArtistsList Page</div>
     );

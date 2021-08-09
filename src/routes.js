@@ -1,23 +1,17 @@
 import React from 'react';
-import {
-    // Redirect,
-    Route,
-    Switch
-} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 import Login from './modules/auth/Containers/Login';
 import Register from './modules/auth/Containers/Register';
 import Home from './modules/auth/Containers/Home';
-
-import ArtistList from './modules/artists/Containers/ArtistsList';
-import ArtistDetails from './modules/artists/Containers/ArtistDetails';
+import {ArtistRoutes} from './modules/artists';
 
 const routes = [
     /*{path: '/', exact: true, name: 'Home', component: AuthRoutes},*/
     /*{path: '/dashboard', name: 'Dashboard', component: AuthRoute},*/
     {path: '/', name: 'Home', component: Home, exact: true},
-    {path: '/artists', name: 'Artists', component: ArtistList, exact: true},
-    {path: '/artists/:id', name: 'Songs', component: ArtistDetails, exact: true},
+    {path: '/artists', name: 'Artists', component: ArtistRoutes},
+    //{path: '/artists/:id', name: 'Songs', component: ArtistDetails, exact: true},
     /*{path: '/albums', name: 'Albums', component: AlbumsRoutes, exact: true},
     {path: '/artists', name: 'Artists', component: ArtistsRoutes, exact: true}*/
 ];
@@ -30,14 +24,12 @@ return (
                     key={idx}
                     path={route.path}
                     exact={route.exact}
-                    // @ts-ignore
                     name={route.name}
                     render={props => (
                         <route.component {...props} />
                     )} />
             )
         })
-        /*<Redirect from="/" to="/dashboard" />*/
 );
 };
 
